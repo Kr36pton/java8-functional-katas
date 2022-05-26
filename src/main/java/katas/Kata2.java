@@ -11,10 +11,10 @@ import util.DataUtil;
     DataSource: DataUtil.getMovies()
     Output: List of Integers
 */
-public class Kata2
-{
-    public static List<Integer> execute()
-    {
+public class Kata2{
+
+    public static List<Integer> execute(){
+        
         List<Movie> movies = DataUtil.getMovies();
 
         return movies.stream().filter(movie -> movie.getRating().equals(5.0)).map(movie -> movie.getId()).collect(Collectors.toList());

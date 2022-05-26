@@ -17,10 +17,12 @@ import util.DataUtil;
     DataSource: DataUtil.getMovies()
     Output: List of ImmutableMap.of("id", 5, "title", "some title", "time", new Date(), "url", "someUrl")
 */
-public class Kata9
-{
-    public static List<Map> execute()
-    {
+public class Kata9{
+
+    @SuppressWarnings("rawtypes")
+
+    public static List<Map> execute(){
+        
         List<MovieList> movieLists = DataUtil.getMovieLists();
 
         List<Movie> movies = movieLists.stream().flatMap(t -> t.getVideos().stream()).collect(Collectors.toList());

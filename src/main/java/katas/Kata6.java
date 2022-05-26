@@ -10,10 +10,10 @@ import util.DataUtil;
     DataSource: DataUtil.getMovieLists()
     Output: String
 */
-public class Kata6
-{
-    public static String execute()
-    {
+public class Kata6{
+
+    public static String execute(){
+        
         List<Movie> movies = DataUtil.getMovies();
 
         return movies.stream().map(movie -> movie.getBoxarts()).flatMap(t -> t.stream()).reduce((box1, box2) -> {
@@ -24,7 +24,6 @@ public class Kata6
 
     }
 
-    @SuppressWarnings("rawtypes")
     public static void main(String[] args)
     {
 

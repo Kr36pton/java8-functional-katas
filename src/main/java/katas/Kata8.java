@@ -16,12 +16,12 @@ import util.DataUtil;
     DataSource: DataUtil.getMovies()
     Output: List of ImmutableMap.of("videoId", "5", "bookmarkId", "3")
 */
-public class Kata8
-{
+public class Kata8{
 
     @SuppressWarnings("rawtypes")
-    public static List<Map> execute()
-    {
+
+    public static List<Map> execute(){
+        
         List<Movie> movies = DataUtil.getMovies();
         List<Bookmark> bookMarks = DataUtil.getBookMarks();
 
